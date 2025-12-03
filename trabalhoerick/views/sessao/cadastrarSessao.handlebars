@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
+    <title>Cadastrar</title>
 </head>
 <body>
-    <h1>Cadastrar Sessão</h1>
+    <div class="titulo">
+        <h1>Cadastrar Sessão</h1>
+    </div>
 
-<form method="POST" action="/sessoes">
-    Data e Hora: <input type="datetime-local" name="dataHora" required><br>
+    <div class="form flex">
+    <form method="POST" action="/sessoes">
+        <p>Data e Hora:</p><input type="datetime-local" name="dataHora" required><br>
 
-    Filme:
-    <select name="filmeId">
-        {{#each filmes}}
-            <option value="{{id}}">{{nome}}</option>
-        {{/each}}
-    </select>
+        <p>Filme:</p>
+        <select name="filmeId">
+            {{#each filmes}}
+                <option value="{{id}}">{{nome}}</option>
+            {{/each}}
+        </select>
 
-    <button type="submit">Salvar</button>
-</form>
+        <button type="submit">Salvar</button>
+    </form>
+    </div>
+    <a href="/" class="voltar">Voltar</a>
 </body>
 </html>

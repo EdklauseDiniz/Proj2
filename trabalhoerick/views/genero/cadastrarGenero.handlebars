@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
 </head>
 <body>
-    <h1>Cadastrar Gênero</h1>
+    <div class="titulo">
+        <h1>Cadastrar Gênero</h1>
+    </div>
 
-<form method="POST" action="/generos">
-    Nome: <input type="text" name="nome">
-    <button type="submit">Salvar</button>
-</form>
+    <div class="flex form">
+        <form method="POST" action="/generos">
+        <p>Nome:</p> <input type="text" name="nome" required>
+        <button type="submit" class="salvar">Salvar</button>
+        </form>
+    </div>
+
+    <a href="/" class="voltar">Voltar</a>
 </body>
 </html>

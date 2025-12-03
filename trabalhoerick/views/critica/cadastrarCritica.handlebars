@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
 </head>
 <body>
-    <h1>Cadastrar Crítica</h1>
+    <div class="titulo">
+        <h1>Cadastrar Crítica</h1>
+    </div>
 
-<form method="POST" action="/criticas">
-    Autor: <input type="text" name="autor" required><br>
-    Nota: <input type="number" name="nota" min="0" max="10" required><br>
-    Texto: <textarea name="texto"></textarea><br>
+    <div class="form">
+        <form method="POST" action="/criticas">
+            <p>Autor:</p> <input type="text" name="autor" required><br>
+            <p>Nota:</p> <input type="number" name="nota" min="0" max="10" required><br>
+            <p>Texto:</p> <textarea name="texto"></textarea><br>
 
-    Filme:
-    <select name="filmeId">
-        {{#each filmes}}
-            <option value="{{id}}">{{nome}}</option>
-        {{/each}}
-    </select><br>
+            <p>Filme:</p>
+            <select name="filmeId">
+                {{#each filmes}}
+                    <option value="{{id}}">{{nome}}</option>
+                {{/each}}
+            </select><br>
 
-    <button type="submit">Enviar</button>
-</form>
-
+            <button type="submit" class="salvar">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>

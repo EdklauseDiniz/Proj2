@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listar</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
 </head>
 <body>
-    <h1>Críticas</h1>
+    <div class="titulo">
+        <h1>Críticas</h1>
+    </div>
 
-    <a href="/criticas/novo">Nova Crítica</a>
-
-    <ul>
-        {{#each criticas}}
-            <li>
-                <strong>{{autor}}</strong> — Nota: {{nota}} <br>
-                Filme: {{Filme.nome}} <br>
-                "{{texto}}"
-                
-                <form action="/criticas/excluir/{{id}}" method="POST" style="display:inline;">
-                    <button type="submit">Excluir</button>
-                </form>
-            </li>
-        {{/each}}
-    </ul>
-
-    <a href="/">Voltar</a>
+    <a href="/criticas/novo" class="botao">Nova Crítica</a>
+    <div class="flex form">
+        <li>
+            {{#each criticas}}
+                <ul>
+                    <strong>{{autor}}</strong><br>
+                    Nota: {{nota}}<br>
+                    Filme: {{Filme.nome}}<br>
+                    <center>"{{texto}}"</center>
+                    
+                    <form action="/criticas/excluir/{{id}}" method="POST" style="display:inline;">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </ul>
+            {{/each}}
+        </li>
+    </div>
+    
+    <a href="/" class="voltar">Voltar</a>
 </body>
 </html>

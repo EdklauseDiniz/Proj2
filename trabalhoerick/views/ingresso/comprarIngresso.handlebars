@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
+    <title>Cadastrar</title>
 </head>
 <body>
+    <div class="titulo">
     <h1>Comprar Ingresso</h1>
+    </div>
 
-<form method="POST" action="/ingressos">
-    Preço: <input type="number" name="preco" required><br>
+    <div class="form">
+        <form method="POST" action="/ingressos">
+            <p>Preço:</p> <input type="number" name="preco" required><br>
 
-    Sessão:
-    <select name="sessaoId">
-        {{#each sessoes}}
-        <option value="{{id}}">{{#if Filme}}{{Filme.nome}} - {{/if}}{{dataHora}}</option>
-        {{/each}}
-    </select>
+            <p>Sessão:</p>
+            <select name="sessaoId">
+                {{#each sessoes}}
+                <option value="{{id}}">{{#if Filme}}{{Filme.nome}} - {{/if}}{{dataHora}}</option>
+                {{/each}}
+            </select>
 
-    <button type="submit">Comprar</button>
-</form>
+            <button type="submit" class="botao">Comprar</button>
+        </form>
+    </div>
+
+    <a href="/" class="voltar">Voltar</a>
 </body>
 </html>

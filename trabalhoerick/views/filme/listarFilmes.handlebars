@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listar</title>
     <link rel="stylesheet" href="/CSS/filme.css">
 </head>
 <body>
@@ -16,7 +16,8 @@
     <div class="flex form">
         <li>
         {{#each filmes}}
-            <ul>{{nome}} 
+            <ul>
+                {{nome}} 
                 <a href="/filmes/ver/{{id}}">Ver</a>
                 <a href="/filmes/{{id}}/editar">Editar</a>
 

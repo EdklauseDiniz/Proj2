@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editar</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
 </head>
 <body>
-    <h1>Editar Ator</h1>
+    <div class="titulo">
+        <h1>Editar Ator</h1>
+    </div>
 
-<form method="POST" action="/atores/{{ator.id}}/editar">
-    Nome: <input type="text" name="nome" value="{{ator.nome}}">
-    <button type="submit">Salvar</button>
-</form>
+    <div class="form">
+        <form method="POST" action="/atores/{{ator.id}}/editar">
+            <p>Nome:</p> <input type="text" name="nome" value="{{ator.nome}}" required>
+            <button type="submit" class="salvar">Salvar</button>
+        </form>
+    </div>
 
+    <a href="/" class="voltar">Voltar</a>
 </body>
 </html>

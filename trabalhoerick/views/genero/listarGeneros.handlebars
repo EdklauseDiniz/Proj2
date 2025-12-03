@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listar</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
 </head>
 <body>
-    <h1>Gêneros</h1>
+    <div class="titulo">
+        <h1>Gêneros</h1>
+    </div>
+    
+    <a href="/generos/novo" class="botao">Cadastrar Gênero</a>
+    
+    <div class="form">
+        <li>
+            {{#each generos}}
+                <ul>
+                    {{nome}}
+                    <a href="/generos/{{id}}/editar">Editar</a>
 
-    <a href="/generos/novo">Cadastrar Gênero</a>
-
-    <ul>
-        {{#each generos}}
-            <li>
-                {{nome}}
-                <a href="/generos/{{id}}/editar">Editar</a>
-
-                <form method="POST" action="/generos/excluir/{{id}}" style="display:inline;">
-                    <button type="submit">Excluir</button>
-                </form>
-            </li>
-        {{/each}}
-    </ul>
-
-    <a href="/">Voltar</a>
+                    <form method="POST" action="/generos/excluir/{{id}}" style="display:inline;">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </ul>
+            {{/each}}
+        </li>
+    </div>
+    <a href="/" class="voltar">Voltar</a>
 </body>
 </html>

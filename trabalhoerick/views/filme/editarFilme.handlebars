@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="/CSS/filme.css">
+    <title>Editar</title>
 </head>
 <body>
-    <div class="titulo">
-        <h1>Editar Filme</h1>
+    <div class="titulo">  
+        <h1>Editar {{filme.nome}}</h1>
     </div>
 
-    <div class="flex form">
+    <div class="form flex">
         <form method="POST" action="/filmes/{{filme.id}}/editar">
             <p>Nome:</p> <input type="text" name="nome" value="{{filme.nome}}" required>
             <button type="submit" class="salvar">Salvar</button>

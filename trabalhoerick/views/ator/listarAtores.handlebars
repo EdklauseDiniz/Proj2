@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listar</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
 </head>
 <body>
-    <h1>Atores</h1>
+    <div class="titulo">
+        <h1>Atores</h1>
+    </div>
 
-    <a href="/atores/novo">Cadastrar Ator</a>
+    <a href="/atores/novo" class="botao">Cadastrar Ator</a>
 
-    <ul>
-        {{#each atores}}
-            <li>
-                {{nome}}
-                <a href="/atores/{{id}}/editar">Editar</a>
+    <div class="flex form">
+        <li>
+            {{#each atores}}
+                <ul>
+                    {{nome}}
+                    <a href="/atores/{{id}}/editar">Editar</a>
 
-                <form method="POST" action="/atores/excluir/{{id}}" style="display:inline;">
-                    <button type="submit">Excluir</button>
-                </form>
-            </li>
-        {{/each}}
-    </ul>
+                    <form method="POST" action="/atores/excluir/{{id}}" style="display:inline;">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </ul>
+            {{/each}}
+        </li>
+    </div>
 
-    <a href="/">Voltar</a>
+    <a href="/" class="voltar">Voltar</a>
 </body>
 </html>

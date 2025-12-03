@@ -36,6 +36,7 @@ input[type="text"] {
 }
 
 .botao {
+    text-decoration: none;
     display:block;
     font-size: 5vh;
     color: #122F51;
@@ -158,6 +159,13 @@ h1 {
     font-size: 8vh;
     text-decoration: underline;
     color:#17A7A8;
+}
+
+select[name="sessaoId"] {
+    width: 300px;
+    height: 40px;    
+    font-size: 16px;  
+    padding: 5px;     
 }
 
 div.titulo:hover {

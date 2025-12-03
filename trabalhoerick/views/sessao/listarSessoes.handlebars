@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listar</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
 </head>
 <body>
-    <h1>Sessões</h1>
+    <div class="titulo">
+        <h1>Sessões</h1>
+    </div>
 
-    <a href="/sessoes/novo">Cadastrar Sessão</a>
+    <a href="/sessoes/novo" class="botao">Cadastrar Sessão</a>
 
-    <ul>
-        {{#each sessoes}}
-            <li>
-                Filme: {{#if Filme}}{{Filme.nome}}{{else}}Sem filme{{/if}} <br>
-                Horário: {{#if dataHora}}{{dataHora}}{{else}}Sem horário{{/if}}
+    <div class="flex form">
+        <li>
+            {{#each sessoes}}
+                <ul>
+                    Filme: {{#if Filme}}{{Filme.nome}}{{else}}Sem filme{{/if}} <br>
+                    Horário: {{#if dataHora}}{{dataHora}}{{else}}Sem horário{{/if}}
 
-                <form method="POST" action="/sessoes/excluir/{{id}}" style="display:inline;">
-                    <button type="submit">Excluir</button>
-                </form>
-            </li>
-        {{/each}}
-    </ul>
+                    <form method="POST" action="/sessoes/excluir/{{id}}" style="display:inline;">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </ul>
+            {{/each}}
+        </li>
+    </div>
 
-    <a href="/">Voltar</a>
+    <a href="/" class="voltar">Voltar</a>
 </body>
 </html>
