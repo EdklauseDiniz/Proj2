@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
 </head>
 <body>
-   <h1>Lista de Filmes</h1>
+    <div class="titulo">
+        <h1>Lista de Filmes</h1>
+    </div>
 
-    <a href="/filmes/novo">Cadastrar novo filme</a>
+    <a href="/filmes/novo" class="botao">Cadastrar novo filme</a>
 
-    <ul>
+    <div class="flex form">
+        <li>
         {{#each filmes}}
-            <li>
-                {{nome}} 
+            <ul>{{nome}} 
                 <a href="/filmes/ver/{{id}}">Ver</a>
                 <a href="/filmes/{{id}}/editar">Editar</a>
 
                 <form method="POST" action="/filmes/excluir/{{id}}" style="display:inline;">
                     <button type="submit">Excluir</button>
                 </form>
-            </li>
+            </ul>
         {{/each}}
-    </ul>
+        </li>
+    </div>
 
-    <a href="/">Voltar</a>
+    <a href="/" class="voltar">Voltar</a>
 </body>
 </html>

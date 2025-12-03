@@ -1,0 +1,190 @@
+body {
+    background-color: #F3D7C2;
+}
+
+.voltar {
+    display: inline-block;
+    margin: auto;
+    font-size: 5vh;
+    text-decoration: none;
+    color: #122F51;
+    background-color: #17A7A8;
+    padding: 1vh 2vh;
+    border-radius: 5px;
+    box-shadow: 1vh 1vh 5px #122F51;
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+p {
+    text-align: center;
+    border-radius: 5px;
+    background-color: #17A7A8;
+    font-size: 4vh;
+    font-style: italic;
+    color: #122F51;
+    margin: 2vh 0;
+}
+
+input[type="text"] {
+    font-size: 4vh;
+    padding: 1vh;
+    border: 2px solid #122F51;
+    border-radius: 5px;
+    box-shadow: 1vh 1vh 5px #122F51;
+    margin-top: 2vh;
+    width: 100%;
+}
+
+.botao {
+    display:block;
+    font-size: 5vh;
+    color: #122F51;
+    width: 50vh;
+    background-color: #17A7A8;
+    padding: 1vh 2vh;
+    border-radius: 5px;
+    box-shadow: 1vh 1vh 5px #122F51;
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+    margin-top: 5vh;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+    font-size: 5vh;
+    color: #122F51;
+    width: 50vh;
+    background-color: #17A7A8;
+    padding: 1vh 2vh;
+    border-radius: 5px;
+    box-shadow: 1vh 1vh 5px #122F51;
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+    margin-top: 5vh;
+}
+
+div.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+form[method="POST"] > b{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    font-size: 5vh;
+    color: #17A7A8;
+}
+
+button[type="submit"].salvar {
+    font-size: 5vh;
+    color: #122F51;
+    margin: auto;
+    background-color: #17A7A8;
+    padding: 1vh 2vh;
+    border-radius: 5px;
+    box-shadow: 1vh 1vh 5px #122F51;
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+    margin-top: 5vh;
+}
+
+div.form {
+    width: 50vh;
+    margin: auto;
+    margin-top: 5vh;
+    padding: 8vh 10vh;
+    background-color: #8BB6A3;
+    border-radius: 10px;
+    box-shadow: 1vh 1vh 5px #122F51;
+}
+
+div.links {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "filmes generos sessoes"
+    "ingressos atores criticas";
+
+    background-color: #8BB6A3;
+    padding: 4vh 5vh;
+    width: 80vh;
+
+    margin: auto;
+    margin-top: 7vh;   
+    border-radius: 10px;
+    box-shadow: 1vh 1vh 5px #122F51;
+}
+
+div.links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    margin: 10px;
+    background-color: #17A7A8;
+    color: #122F51;
+    font-size: 4vh;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+    box-shadow: 1vh 1vh 5px #122F51;
+}
+
+div.titulo {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background-color:#8BB6A3;
+    border-radius: 10px;
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+    box-shadow: 2vh 2vh 10px #122F51;
+}
+
+h1 {
+    font-size: 8vh;
+    text-decoration: underline;
+    color:#17A7A8;
+}
+
+div.titulo:hover {
+    box-shadow: 3vh 3vh 15px rgb(0, 0, 0);
+    transform: scale(1.05);
+}
+
+a[href="/filmes"] {
+        grid-area: filmes;
+}
+
+a[href="/generos"] {
+        grid-area: generos;
+}
+
+a[href="/sessoes"] {
+        grid-area: sessoes;
+}
+
+a[href="/ingressos"] {
+        grid-area: ingressos;
+}
+
+a[href="/atores"] {
+        grid-area: atores;
+}
+
+a[href="/criticas"] {
+        grid-area: criticas;
+}

@@ -15,6 +15,7 @@ const Critica = require('./models/critica.model');
 const port = 3000;
 
 serve.use(express.urlencoded({ extended: true }));
+serve.use(express.static('.')); // Configura pasta raiz como estática
 serve.engine('handlebars', exphbs.engine({ defaultLayout: false }));
 serve.set('view engine', 'handlebars');
 

@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
 </head>
 <body>
- <h1>Detalhes do Filme</h1>
+    <div class="titulo">
+        <h1>Detalhar {{filme.nome}}</h1>
+    </div>
 
-<p><strong>ID:</strong> {{filme.id}}</p>
-<p><strong>Nome:</strong> {{filme.nome}}</p>
+    <div class="form">
+        <p><strong>ID:</strong> {{filme.id}}</p>
+        <p><strong>Nome:</strong> {{filme.nome}}</p>
+    </div>
 
-<a href="/filmes">Voltar</a>
+    <a href="/" class="voltar">Voltar</a>
 
 </body>
 </html>

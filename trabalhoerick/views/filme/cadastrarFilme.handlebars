@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="/CSS/filme.css">
 </head>
 <body>
-<h1>Cadastrar Filme</h1>
+    <div class="titulo">  
+        <h1>Cadastrar Filme</h1>
+    </div>
 
-<form method="POST" action="/filmes">
-    Nome: <input type="text" name="nome" required>
-    <button type="submit">Salvar</button>
-</form>
-    <a href="/">Voltar</a>
+    <div class="form">
+        <form method="POST" action="/filmes">
+            <p>Nome:</p> <input type="text" name="nome" required>
+            <button type="submit" class="salvar">Salvar</button>
+        </form>
+    </div>
+
+    <a class="voltar" href="/">Voltar</a>
 </body>
 </html>
