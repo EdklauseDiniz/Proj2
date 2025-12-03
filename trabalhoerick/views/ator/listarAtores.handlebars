@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atores</h1>
+
+    <a href="/atores/novo">Cadastrar Ator</a>
+
+    <ul>
+        {{#each atores}}
+            <li>
+                {{nome}}
+                <a href="/atores/{{id}}/editar">Editar</a>
+
+                <form method="POST" action="/atores/excluir/{{id}}" style="display:inline;">
+                    <button type="submit">Excluir</button>
+                </form>
+            </li>
+        {{/each}}
+    </ul>
+
+    <a href="/">Voltar</a>
+</body>
+</html>

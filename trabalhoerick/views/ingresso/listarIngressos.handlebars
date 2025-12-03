@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ingressos</h1>
+
+    <a href="/ingressos/novo">Comprar Ingresso</a>
+
+    <ul>
+        {{#each ingressos}}
+            <li>
+                Preço: R$ {{preco}} <br>
+                Sessão: {{Sessao.dataHora}}
+
+                <form method="POST" action="/ingressos/excluir/{{id}}" style="display:inline;">
+                    <button type="submit">Excluir</button>
+                </form>
+            </li>
+        {{/each}}
+    </ul>
+
+    <a href="/">Voltar</a>
+</body>
+</html>

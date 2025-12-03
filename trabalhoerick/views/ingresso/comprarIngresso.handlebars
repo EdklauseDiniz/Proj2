@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Comprar Ingresso</h1>
+
+<form method="POST" action="/ingressos">
+    Preço: <input type="number" name="preco" required><br>
+
+    Sessão:
+    <select name="sessaoId">
+        {{#each sessoes}}
+        <option value="{{id}}">{{#if Filme}}{{Filme.nome}} - {{/if}}{{dataHora}}</option>
+        {{/each}}
+    </select>
+
+    <button type="submit">Comprar</button>
+</form>
+</body>
+</html>

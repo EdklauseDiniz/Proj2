@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Editar Filme</h1>
+
+<form method="POST" action="/filmes/{{filme.id}}/editar">
+    Nome: <input type="text" name="nome" value="{{filme.nome}}" required>
+    <button type="submit">Salvar</button>
+</form>
+
+    <a href="/cadastrarFilme">Voltar</a>
+</body>
+</html>

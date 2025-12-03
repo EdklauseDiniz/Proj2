@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sessões</h1>
+
+    <a href="/sessoes/novo">Cadastrar Sessão</a>
+
+    <ul>
+        {{#each sessoes}}
+            <li>
+                Filme: {{#if Filme}}{{Filme.nome}}{{else}}Sem filme{{/if}} <br>
+                Horário: {{#if dataHora}}{{dataHora}}{{else}}Sem horário{{/if}}
+
+                <form method="POST" action="/sessoes/excluir/{{id}}" style="display:inline;">
+                    <button type="submit">Excluir</button>
+                </form>
+            </li>
+        {{/each}}
+    </ul>
+
+    <a href="/">Voltar</a>
+</body>
+</html>

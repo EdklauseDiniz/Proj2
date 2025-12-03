@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Lista de Filmes</h1>
+
+    <a href="/filmes/novo">Cadastrar novo filme</a>
+
+    <ul>
+        {{#each filmes}}
+            <li>
+                {{nome}} 
+                <a href="/filmes/ver/{{id}}">Ver</a>
+                <a href="/filmes/{{id}}/editar">Editar</a>
+
+                <form method="POST" action="/filmes/excluir/{{id}}" style="display:inline;">
+                    <button type="submit">Excluir</button>
+                </form>
+            </li>
+        {{/each}}
+    </ul>
+
+    <a href="/">Voltar</a>
+</body>
+</html>
